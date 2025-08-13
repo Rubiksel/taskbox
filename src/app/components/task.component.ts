@@ -30,6 +30,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         id="title-{{ task?.id }}"
         name="title-{{ task?.id }}"
         placeholder="Input title"
+        style="background-color: red;"
       />
     </label>
     <button
@@ -54,7 +55,6 @@ export default class TaskComponent {
   }
 
   onArchive(id: any) {
-    this.onArchiveTask.emit(id)
+    this.onArchiveTask.emit(id);
   }
 }
-
